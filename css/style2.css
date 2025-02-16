@@ -1,0 +1,122 @@
+/* Import Swiper styles */
+@import url("https://unpkg.com/swiper/swiper-bundle.min.css");
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+    overflow-x: hidden;
+}
+
+/* Home Section */
+.home {
+    padding: 0;
+    width: 100%;
+}
+
+/* Swiper Slide Styling */
+.home .swiper-slide {
+    min-height: 100vh;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Dark Overlay */
+.home .swiper-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Text Container */
+.home .swiper-slide .container {
+    text-align: center;
+    width: 70rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Heading Styling */
+h3 {
+    font-size: 4rem;
+    color: #f2f1ec;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+span {
+    color: #ff914d;
+    font-weight: bold;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #ff914d;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background: #d26c40;
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    height: 4rem;
+    width: 4rem;
+    background: #fff;
+    color: #333;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: #ff914d;
+    color: #fff;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h3 {
+        font-size: 3rem;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h3 {
+        font-size: 2.5rem;
+    }
+}
